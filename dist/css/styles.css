@@ -112,6 +112,7 @@ hr {
   opacity: 0.25;
 }
 
+
 h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -602,6 +603,15 @@ progress {
 .img-fluid {
   max-width: 100%;
   height: auto;
+}
+
+.fade-in-section {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+.fade-in-section.visible {
+  opacity: 1;
 }
 
 .img-thumbnail {
