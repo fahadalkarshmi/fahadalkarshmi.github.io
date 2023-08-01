@@ -32,3 +32,20 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+document.addEventListener("DOMContentLoaded", function() {
+  let observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.intersectionRatio > 0) {
+        entry.target.classList.add("visible");
+      } else {
+        entry.target.classList.remove("visible");
+      }
+    });
+  });
+
+  document.querySelectorAll('.fade-in-section').forEach(section => {
+    observer.observe(section);
+  });
+});
+
