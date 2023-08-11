@@ -44,3 +44,23 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 
+       document.addEventListener("DOMContentLoaded", function() {
+    const navLinks = document.querySelectorAll(".nav-link.js-scroll-trigger");
+    navLinks.forEach(link => {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+            
+            // Hide all sections
+            const sections = document.querySelectorAll(".fade-in-section");
+            sections.forEach(section => {
+                section.classList.remove("active");
+            });
+
+            // Show the clicked section
+            const targetId = this.getAttribute("href");
+            document.querySelector(targetId + " .fade-in-section").classList.add("active");
+        });
+    });
+});
+
+
