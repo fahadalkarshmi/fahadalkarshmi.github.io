@@ -34,18 +34,20 @@ window.addEventListener('DOMContentLoaded', event => {
 });
 
 document.addEventListener("DOMContentLoaded", function() {
-  let observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.intersectionRatio > 0) {
-        entry.target.classList.add("visible");
-      } else {
-        entry.target.classList.remove("visible");
-      }
+    const navLinks = document.querySelectorAll(".nav-link.js-scroll-trigger");
+    navLinks.forEach(link => {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+
+            // Remove the active class from all sections
+            const sections = document.querySelectorAll(".fade-in-section");
+            sections.forEach(section => {
+                section.classList.remove("active");
+            });
+
+            // Add the active class to the clicked section
+            const targetId = this.getAttribute("href");
+            document.querySelector(targetId).classList.add("active");
+        });
     });
-  });
-
-  document.querySelectorAll('.fade-in-section').forEach(section => {
-    observer.observe(section);
-  });
 });
-
