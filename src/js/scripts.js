@@ -28,37 +28,20 @@ window.addEventListener('DOMContentLoaded', event => {
 
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-  let observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.intersectionRatio > 0) {
-        entry.target.classList.add("visible");
-      } else {
-        entry.target.classList.remove("visible");
-      }
-    });
-  });
-
-  document.querySelectorAll('.fade-in-section').forEach(section => {
-    observer.observe(section);
-  });
-});
-
-       document.addEventListener("DOMContentLoaded", function() {
     const navLinks = document.querySelectorAll(".nav-link.js-scroll-trigger");
     navLinks.forEach(link => {
         link.addEventListener("click", function(e) {
             e.preventDefault();
-            
+
             // Hide all sections
-            const sections = document.querySelectorAll(".fade-in-section");
+            const sections = document.querySelectorAll(".resume-section");
             sections.forEach(section => {
                 section.classList.remove("active");
             });
 
             // Show the clicked section
             const targetId = this.getAttribute("href");
-            document.querySelector(targetId + " .fade-in-section").classList.add("active");
+            document.querySelector(targetId).classList.add("active");
         });
     });
 });
