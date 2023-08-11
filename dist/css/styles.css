@@ -3162,7 +3162,7 @@ textarea.form-control-lg {
     display: none;
 }
 
-.fade-in-section.active {
+#about.fade-in-section {
     display: block;
 }
 
