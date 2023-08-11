@@ -3166,6 +3166,10 @@ textarea.form-control-lg {
 .fade {
   transition: opacity 0.15s linear;
 }
+.fade-in-section.active {
+                display: block;
+            }
+
 @media (prefers-reduced-motion: reduce) {
   .fade {
     transition: none;
