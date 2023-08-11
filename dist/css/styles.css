@@ -605,14 +605,6 @@ progress {
   height: auto;
 }
 
-.fade-in-section {
-  opacity: 0;
-  transition: opacity 1s ease-out;
-}
-
-.fade-in-section.visible {
-  opacity: 1;
-}
 
 .img-thumbnail {
   padding: 0.25rem;
@@ -3166,9 +3158,13 @@ textarea.form-control-lg {
 .fade {
   transition: opacity 0.15s linear;
 }
+.fade-in-section {
+    display: none;
+}
+
 .fade-in-section.active {
-                display: block;
-            }
+    display: block;
+}
 
 @media (prefers-reduced-motion: reduce) {
   .fade {
