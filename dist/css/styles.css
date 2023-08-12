@@ -10931,6 +10931,13 @@ p.lead {
     display: block;
   }
 }
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Centers the children elements horizontally */
+    flex-wrap: wrap;         /* Allows the icons to wrap to the next line if there's not enough space */
+}
+
 .social-icons .social-icon {
   display: inline-flex;
   align-items: center;
@@ -10941,14 +10948,14 @@ p.lead {
   color: #fff;
   border-radius: 100%;
   font-size: 1.5rem;
-  margin-right: 1.5rem;
+  margin: 0 0.75rem;  /* Updated this line to have equal left and right margins */
 }
-.social-icons .social-icon:last-child {
-  margin-right: 0;
-}
+
+
 .social-icons .social-icon:hover {
   background-color: #bd5d38;
 }
+
 
 .dev-icons {
   font-size: 3rem;
