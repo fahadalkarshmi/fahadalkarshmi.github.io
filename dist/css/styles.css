@@ -3158,12 +3158,12 @@ textarea.form-control-lg {
 .fade {
   transition: opacity 0.15s linear;
 }
-.fade-in-section {
+
+.resume-section {
     display: none;
 }
-
 #about {
-    display: block !important; 
+    display: block;
 }
 
 @media (prefers-reduced-motion: reduce) {
