@@ -3163,7 +3163,7 @@ textarea.form-control-lg {
 }
 
 #about {
-    display: block;
+    display: block !important; 
 }
 
 @media (prefers-reduced-motion: reduce) {
