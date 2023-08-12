@@ -22,6 +22,7 @@
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="dist/css/styles.css" rel="stylesheet" />
 
+
     </head>
     
 
@@ -239,6 +240,26 @@
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="dist/js/scripts.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script>
+        $(document).ready(function() {
+            // initially hide all sections except for "About"
+            $('.resume-section').not('#about').hide();
+
+            $('.nav-link.js-scroll-trigger').click(function(e) {
+                e.preventDefault();
+
+                // get the href of the clicked link (e.g., "#about")
+                var targetSection = $(this).attr('href');
+
+                // hide all sections
+                $('.resume-section').hide();
+
+                // show the targeted section
+                $(targetSection).fadeIn();
+
+            });
+        });
+    </script> 
     </body>
 </html>
