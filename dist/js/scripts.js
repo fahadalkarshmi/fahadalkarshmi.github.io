@@ -1,14 +1,15 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Get all sections
-    const sections = document.querySelectorAll('.resume-section');
+$(document).ready(function() {
+    // When any navigation link is clicked
+    $('a[data-toggle="collapse"]').on('click', function(e) {
+        e.preventDefault();
 
-    sections.forEach(function(section) {
-        section.addEventListener('click', function() {
-            // Hide all sections
-            sections.forEach(sec => sec.style.display = 'none');
+        // Get the target section's ID from the clicked link's href attribute
+        var targetId = $(this).attr('href');
 
-            // Show the clicked section
-            section.style.display = 'block';
-        });
+        // First, hide all sections
+        $('.resume-section').hide();
+
+        // Then, show only the target section
+        $(targetId).show();
     });
 });
