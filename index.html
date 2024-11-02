@@ -1,266 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Fahad is a second-year PhD student at the Department of Computing, Imperial College London. He is working on learning-based NIDS (Network Intrusion Detection Systems)." />
-        <meta name="author" content="Fahad Alotaibi" />
-        <meta name="google-site-verification" content="aUbryPQfqy4H3sKM1D5MkGZ2lZRTjg7YwD5Dbau7af0" />
-        <title>Fahad Alotaibi (فهد العتيبي)</title>
-        
-        <!-- Favicon with shield icon -->
-        <link href="dist/assets/img/favicon.png" rel="icon">
-        <link href="dist/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+<head>
+    <meta charset="UTF-8">
+    <title>Fahad Alotaibi (فهد العتيبي)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Reset default margin and padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
+        /* Set body styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            height: 100vh;
+            color: #333;
+        }
 
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
-        
-        <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="dist/css/styles.css" rel="stylesheet" />
+        /* Left and right container styles */
+        .left-side, .right-side {
+            padding: 30px;
+        }
 
+        .left-side {
+            width: 350px;
+            background-color: #2C3E50; /* Dark Blue */
+            color: #ECF0F1; /* Light text color */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
 
-    </head>
-    
+        .right-side {
+            flex: 1;
+            overflow-y: auto;
+            background-color: #ECF0F1; /* Light background */
+            padding-left: 50px;
+            padding-right: 50px;
+        }
 
-    <body id="page-top">
-        <!-- Navigation-->
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <!-- Brand -->
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">
-        <span class="d-lg-none">Fahad Alotaibi (فهد العتيبي)</span>
-        <figure class="d-none d-lg-block">
-            <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="dist/assets/img/profile.jpg" alt="Fahad Alotaibi's Profile" />
-        </figure>
-    </a>
-    
-    <!-- Mobile Toggle Button -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <!-- Navigation Items -->
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav">
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#volunteer">Volunteer</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
-            <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#posts">Blogs</a></li>
-        </ul>
-    </div>
-</nav>
-        
-        <!-- Page Content-->
-        <div class="container-fluid p-0">
-            <!-- About-->
-             <section class="resume-section fade-in-section" id="about">
+        /* Personal info styling */
+        .profile-picture {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            object-fit: cover;
+            border: 5px solid #ECF0F1;
+        }
 
+        .personal-info h2 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            text-align: center;
+        }
 
-                <div class="resume-section-content">
-                    <h1 class="mb-0">
-                        Fahad
-                        <span class="text-primary">Alotaibi</span>
-                    </h1>
-                    <div class="subheading mb-5">
-                        Office 441, Huxley Building, South Kensington, London.
-                        <a href="mailto:f.alotaibi21@imperial.ac.uk">f.alotaibi21@imperial.ac.uk</a>
-                    </div>
-                    <p class="lead mb-5">Hello there! I am a second-year PhD student at the <a href="https://www.imperial.ac.uk/people/f.alotaibi21">Department of Computing</a>, Imperial College London. My academic journey is guided by the brilliant minds of <a href="https://www.imperial.ac.uk/people/sergio.maffeis">Dr. Sergio Maffies</a> and <a href="https://www.imperial.ac.uk/people/c.hankin">Professor Christopher Hankin</a>, under whose supervision I am dedicatedly pursuing my research.</p>
-        <p>My primary focus lies in the fascinating realm of deploying learning-based NIDS (Network Intrusion Detection Systems) in real environments. Within this domain, I am diligently tackling three interlinked challenges that have captured my curiosity and enthusiasm:</p>
-                        
-        <ol>
-            <li> <b> Adaptive Binary Classification</b>: I am investigating innovative approaches to ensure that NIDS can adapt dynamically to the ever-evolving network threats.</li>
-            <li><b> Novel Classes Detection and Adaptation in Categorization Settings</b>: This area of my research aims to enhance NIDS capabilities in detecting and adapting to novel and previously unseen classes of network attacks.</li>
-            <li><b> Robustness to Poisonous Attacks</b>: As part of my work, I am actively exploring methods to fortify NIDS against malicious attempts during the training to compromise its effectiveness.</li>
-        </ol>
-        <p>My academic background includes a distinguished Master's degree in <a href="https://www.york.ac.uk/study/postgraduate-taught/courses/msc-cyber-security/">Cyber Security</a> from the University of York, where I honed my expertise under the expert guidance of <a href="https://www-users.york.ac.uk/~vv573/">Dr. Vasileios Vasilakis.</a> During that time, I made significant contributions to the field of cyber security by devising strategies to prevent ransomware in SDN (Software-Defined Networking) networks.</p>
-        <p>Beyond academia, I also play a vital role in the business world as the non-executive chairman at Bin Mastor Co., a family business based in Riyadh. In this capacity, I provide strategic guidance and steer future investments, contributing to the growth and success of the company.</p>
-                    <div class="social-icons">
-                        <a class="social-icon" href="https://www.linkedin.com/in/fahad-alotaibi-79585015b/"><i class="fab fa-linkedin-in"></i></a>
-                        <a class="social-icon" href="https://github.com/fahadalkarshmi/"><i class="fab fa-github"></i></a>
-                        <a class="social-icon" href="https://x.com/fahadalkarshmi"><i class="fab fa-twitter"></i></a>
-                        <a class="social-icon" href="https://scholar.google.co.uk/citations?user=g0VW3FcAAAAJ&hl=en&oi=sra"><i class="fas fa-graduation-cap"></i></a>
-                    </div>
-                </div>
-            <hr class="m-0" />
-            </section>
-            
-            <!-- Education-->
-<section class="resume-section fade-in-section" id="education">
-    <div class="resume-section-content">
-        <h2 class="mb-5">Education</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Imperial College London</h3>
-                            <div class="subheading mb-3">Doctorate of Philosophy</div>
-                            <div>Cyber Security and Deep Learning</div>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">October 2021 - Present</span></div>
-                    </div>
+        .personal-info p {
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
 
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">University of York</h3>
-                            <div class="subheading mb-3">Master of Science</div>
-                            <div>Cyber Security</div>
-                            <p>Grade: Distinction</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">September 2019 - September 2020</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Shaqra University</h3>
-                            <div class="subheading mb-3">Bachelor of Science</div>
-                            <div>Computer Science - Networks</div>
-                            <p>Grade: First-Class Honour</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">August 2013 - August 2017</span></div>
-                    </div>
-                </div>
-    <hr class="m-0" />
-</section>
+        .personal-info a {
+            color: #1ABC9C; /* Teal */
+            text-decoration: none;
+        }
 
-            
-            <hr class="m-0" />
-            <!-- Experience-->
-            <section class="resume-section fade-in-section" id="experience">
-                    <div class="resume-section-content">
+        .personal-info a:hover {
+            text-decoration: underline;
+        }
 
-                    <h2 class="mb-5">Experience</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Postgraduate Teaching Assistant</h3>
-                            <div class="subheading mb-3">Imperial College London</div>
-                            <p>Demonstaring labs in the 331 - Network and Web Security module, and marking reports in the 50005 - Networks and Communications module.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">January 2022 - Present</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Non Executive Chairman</h3>
-                            <div class="subheading mb-3">Bin Mastor</div>
-                            <p>Analyzing potential opportunities and identifying areas for enhancement in order to drive the business forward.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">March 2020 - Present</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Lecturer</h3>
-                            <div class="subheading mb-3">Najran University</div>
-                            <p>Lecturing Information Security, E-commerce, and Machine Learning. Conducting research to enhance cyber security solutions.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">December 2017 - Present</span></div>
-                    </div>
-                </div>
-            </section>
-        
-            <hr class="m-0" />
-            <!-- Experience-->
-            <section class="resume-section fade-in-section" id="volunteer">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Volunteer Experience</h2>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Machine Learning and Cyber Security Symposium</h3>
-                            <div class="subheading mb-3">Department of Computing, Imperial College London</div>
-                            <p>Co-founded and structured the Machine Learning and Cyber Security Symposium at Imperial College London, helping in speaker invitations and ensuring smooth logistical execution while actively steering constructive discussions. Managed expert engagements and synthesized insights for future technological directions.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">July 2021 - Present</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Vice President</h3>
-                            <div class="subheading mb-3">Saudi Student Club at York</div>
-                            <p>Saudi Club is a volunteer-based organization that aims to support Saudi students. It involves organizing events, sorting newcomers' matters (e.g., accommodation), and providing continuous support to current students.</p>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">January 2019 - January 2020</span></div>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="flex-grow-1">
-                            <h3 class="mb-0">Vice President</h3>
-                            <div class="subheading mb-3">Saudi Student Association at the University of York</div>
-                        </div>
-                        <div class="flex-shrink-0"><span class="text-primary">January 2019 - January 2020</span></div>
-                    </div>
-                </div>
-            </section>
+        /* Right Side Content Styling */
+        .right-side h2 {
+            font-size: 26px;
+            margin-bottom: 15px;
+            color: #2C3E50;
+        }
 
+        .right-side p, .right-side li {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #2C3E50;
+        }
 
-            <hr class="m-0" />
-            <!-- Skills-->
-            <section class="resume-section fade-in-section" id="skills">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Skills</h2>
-                    <div class="subheading mb-3">Programming Languages & Tools</div>
-                    <ul class="list-inline dev-icons">
-                        <li class="list-inline-item"><i class="fab fa-python"></i> Python</li>
-                        <li class="list-inline-item"><i class="fab fa-tensorflow"></i> TensorFlow</li>
-                        <li class="list-inline-item"><i class="fab fa-pytorch"></i> PyTorch</li>
-                        <li class="list-inline-item"><i class="fas fa-shield-alt"></i> IDS</li>
-                        <li class="list-inline-item"><i class="fas fa-search"></i> Digital Forensics</li>
-                        <li class="list-inline-item"><i class="fas fa-bug"></i> Malware</li>
-                    </ul>
-                    <div class="subheading mb-3">Workflow</div>
-                    <ul class="fa-ul mb-0">
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Mobile-First, Responsive Design
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Browser Testing & Debugging
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Cross Functional Teams
-                        </li>
-                        <li>
-                            <span class="fa-li"><i class="fas fa-check"></i></span>
-                            Agile Development & Scrum
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <hr class="m-0" />
-            <!-- Interests-->
-            <section class="resume-section fade-in-section" id="posts">
-                <div class="resume-section-content">
-                    <h2 class="mb-5">Blog Posts</h2>
-                    <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
-                    <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
-                </div>
-            </section>
-            <hr class="m-0" />
+        .right-side ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .right-side a {
+            color: #2980B9; /* Blue */
+            text-decoration: none;
+        }
+
+        .right-side a:hover {
+            text-decoration: underline;
+        }
+
+        /* Add some spacing between sections */
+        .section {
+            margin-bottom: 40px;
+        }
+
+        /* Adjust scrollbar styling (optional) */
+        .right-side::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        .right-side::-webkit-scrollbar-thumb {
+            background: #BDC3C7;
+            border-radius: 5px;
+        }
+
+        .right-side::-webkit-scrollbar-thumb:hover {
+            background: #95A5A6;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Left Side (Personal Information) -->
+    <div class="left-side">
+        <div class="personal-info">
+            <img src="fahad.png" alt="Fahad" class="profile-picture">
+            <h2>Fahad Alotaibi</h2>
+            <p><strong>Location:</strong><br>420, 4th floor, Huxley building,<br>South Kensington</p>
+            <p><strong>Email:</strong><br><a href="mailto:F.alotaibi21@imperial.ac.uk">F.alotaibi21@imperial.ac.uk</a></p>
+            <p><strong>Scholar:</strong><br><a href="https://scholar.google.co.uk/citations?hl=en&user=g0VW3FcAAAAJ&view_op=list_works&sortby=pubdate" target="_blank">F Alotaibi</a></p>
+            <p><strong>LinkedIn:</strong><br><a href="https://www.linkedin.com/in/fahad-alotaibi-79585015b/" target="_blank">Fahad Alotaibi</a></p>
         </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-            <script>
-        $(document).ready(function() {
-            // initially hide all sections except for "About"
-            $('.resume-section').not('#about').hide();
+    </div>
 
-            $('.nav-link.js-scroll-trigger').click(function(e) {
-                e.preventDefault();
+    <!-- Right Side (Hobbies & Interests) -->
+    <div class="right-side">
+        <div class="section">
+            <h2>Me in a Nutshell</h2>
+            <p>I am a final-year PhD candidate in the Department of Computing at Imperial College London, supervised by Dr. Sergio Maffeis. My research focuses on improving deep learning-based network intrusion detection systems (NIDS). Specifically, I am trying to:</p> <br>
+            <ul>
+                <li><strong>Adapt one-class anomaly detection NIDS</strong> to handle changes in normal (benign) behavior.</li>
+                <li><strong>Enable multi-class NIDS</strong> to adapt to new attacks as they emerge over time.</li>
+                <li><strong>Enhance the robustness</strong> of these systems against noisy labels and label-flipping attacks.</li>
+            </ul>
+            <p>By <em><u>adapt</u></em>, I mean developing systems that can detect and adjust to changes with minimal cost.</p>
+        </div>
+<div class="section">
+            <h2>Updates</h2> 
+            <ul>
+                <li>[2024-11] <strong><a href="https://uk.linkedin.com/in/euangoodbrand" target="_blank">Euan Goodbrand</a></strong>'s thesis earned the designation of <em>Distinguished Thesis</em>. </li>
+                <li>[2024-7] <strong><a href="https://uk.linkedin.com/in/yunan-peng-15a53822a" target="_blank">YuNan Peng</a></strong>'s thesis was awarded a <em>Distinction</em>. </li>
+                <li>[2024-6] <strong><a href="https://www.doc.ic.ac.uk/~maffeis/papers/raid24.pdf" target="_blank">Mateen</a></strong> is accepted at RAID 2024</li>
+                <li>[2024-4] <strong><a href="https://www.doc.ic.ac.uk/~maffeis/papers/ifipsec24.pdf" target="_blank">Rasd</a></strong> is accepted at IFIP SEC 2024 </li>
+            </ul>
+        </div>
 
-                // get the href of the clicked link (e.g., "#about")
-                var targetSection = $(this).attr('href');
 
-                // hide all sections
-                $('.resume-section').hide();
+        <div class="section">
+            <h2>Publications</h2>
+            <p><strong><a href="https://www.doc.ic.ac.uk/~maffeis/papers/raid24.pdf" target="_blank">Mateen: Adaptive Ensemble Learning for Network Anomaly Detection</a></strong> with Sergio Maffeis. Appeared in <em>RAID 2024</em>.</p>
+            <p><strong><a href="https://www.doc.ic.ac.uk/~maffeis/papers/ifipsec24.pdf" target="_blank">Rasd: Semantic Shift Detection and Adaptation for Network Intrusion</a></strong> with Sergio Maffeis. Appeared in <em>IFIP SEC 2024</em>.</p>
+        </div>
+        <div class="section">
+            <h2>Supervision</h2>
+             <p>I co-supervised the following students alongside Dr. Sergio Maffeis.</p>
+            <ul>
+                <p><li> [2024] <strong>Euan Goodbrand</strong> - MSc degree in Artificial Intelligence and Machine Learning with Distinction from ICL. </li></p>
+                 <dt> Project: Deep Learning From Noisy and Imbalanced Security Data</dt>
+                <p><li> [2024] <strong>YuNan Peng</strong> - MEng degree in Electronic and Information Engineering with Distinction from ICL. </li></p>
+                 <dt> Project: Enhancing Network Intrusion Detection Systems with Active Learning: A Semi-Supervised Coreset Selection Approach</dt>
+                
+            </ul>
+        </div>
+        <div class="section">
+            <h2>Review</h2>
+             <p>I co-reviewed for the following conferences alongside Dr. Sergio Maffeis.</p>
+            <ul>
+                <p><li> [2024] <strong> IEEE Computer Security Foundations Symposium (CSF) </strong> </li></p>       <p><li> [2023] <strong> IEEE Security and Privacy (Oakland) </strong> </li></p>               
+                <p><li> [2021] <strong> IEEE Security and Privacy (Oakland) </strong> </li></p>                
+            </ul>
+        </div>
+    </div>
 
-                // show the targeted section
-                $(targetSection).fadeIn();
-
-            });
-        });
-    </script> 
-    </body>
+</body>
 </html>
